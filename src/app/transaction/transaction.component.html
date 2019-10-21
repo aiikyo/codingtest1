@@ -1,0 +1,82 @@
+<form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+
+    <label>
+        Date:
+        <input type="date" formControlName="date">
+    </label>
+    <label>
+        Type:
+        <select formControlName="type">
+            <option *ngFor="let x of options">{{x}}</option>
+        </select>
+    </label>
+    <label>
+        Status:
+        <select formControlName="status">
+                <option *ngFor="let x of options">{{x}}</option>
+            </select>
+    </label>
+    <label>
+        CIF No:
+        <input type="text" formControlName="cifno">
+        <button id='close' onclick='this.parentNode.remove(this.parentNode); return false;'
+            (click)="resetInputField('cifno')">x</button>
+
+    </label>
+    <button (click)="showAllFilter()" class="showMore" *ngIf="showAll == false">
+        Show More
+    </button>
+    <div *ngIf="showAll" [@slideInOut]>
+
+        <label>
+            Investor:
+            <input type="text" formControlName="investor">
+            <button id='close' onclick='this.parentNode.remove(this.parentNode); return false;'
+                (click)="resetInputField('investor')">x</button>
+
+        </label>
+
+        <label>
+            Product Name:
+            <input type="text" formControlName="productname">
+            <button id='close' onclick='this.parentNode.remove(this.parentNode); return false;'
+                (click)="resetInputField('productname')">x</button>
+
+        </label>
+
+
+        <button (click)="showAllFilter()" class="showLess" *ngIf="showAll">
+            Show Less
+        </button>
+    </div>
+    <input type="submit" value="Search" class="cta">
+
+    <button (click)="resetFilter(); transactionForm.reset()" class="cta" style="background-color: orange;">
+        Reset Filter
+    </button>
+</form>
+
+
+<div class="results">
+
+    <strong>Transaction Date:</strong>
+    <span>{{ transactionForm.controls.date.value }}</span>
+
+    <strong>Transaction Type:</strong>
+    <span>{{ transactionForm.controls.type.value }}</span>
+
+    <strong>Status:</strong>
+    <span>{{ transactionForm.controls.status.value }}</span>
+    <span *ngIf="cifno">
+        <strong>CIF:</strong>
+        <span>{{ transactionForm.controls.cifno.value }}</span>
+    </span>
+    <span *ngIf="investor">
+        <strong>Investor Name:</strong>
+        <span>{{ transactionForm.controls.investor.value }}</span>
+    </span>
+    <span *ngIf="productname">
+        <strong>Product Name:</strong>
+        <span>{{ transactionForm.controls.productname.value }}</span>
+    </span>
+</div>

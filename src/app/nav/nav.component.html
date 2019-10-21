@@ -1,0 +1,18 @@
+<header *ngIf="visibleNav"  [@slideInOut]>
+
+    <div >
+        <a routerLink="/" class="logo">{{ appTitle }}</a>
+        <div *ngIf="visibleNav" [@slideInOut]>
+            <nav>
+                <ul>
+                    <li><a routerLink="/"><span class="fas fa-camera"></span>Dashboard</a></li>
+                    <li><a routerLink="/transaction">Transaction</a></li>
+                    <li><a routerLink="/employee">Employee</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+</header>
+<button class="button" (click)="showHideNav()">=</button>
+

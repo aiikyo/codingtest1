@@ -1,0 +1,98 @@
+
+label input, label textarea, select {
+    
+    
+    margin-bottom: 20px;
+    padding: 1em;
+}
+label .error {
+    margin-top: -20px;
+    background: yellow;
+    padding: 0.5em;
+    display: inline-block;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+.cta {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    margin-top: 1em;
+    margin-right: 1em;
+    
+}
+.cta:hover {
+    background: #4CAF50;
+    border: none;
+    color: grey;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    margin-top: 1em;
+    margin-right: 1em;
+    
+}
+.results {
+    margin-top: 50px;
+}
+.results strong {
+    display: block;
+}
+.results span {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.showMore {
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+    
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+  }
+
+  .showLess {
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+    
+    cursor: pointer;
+    
+  }
+
+  #close {
+    
+    border: none;
+    color:#fff;
+    background:red;
+    border-radius: 50%;
+    
+}
+
+#close:hover {
+    border-radius: 50%;
+    border: none;
+    
+    background:red;
+    color:#fffeee;
+}

@@ -1,0 +1,47 @@
+header {
+    background: white;
+    width: 15%;
+    height: 100%;
+    float: left;
+}
+header .logo {
+    font-weight: bold;
+}
+
+header nav {
+    justify-self: right;
+}
+
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    
+}
+header nav ul li {
+    float: left;
+    margin-top: 30px;
+}
+header nav ul li a {
+    padding: 1.5em;
+    
+    font-size: 0.8em;
+}
+header nav ul li a:hover {
+    background: #28abd3;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 2px 2px;
+    cursor: pointer;
+  }
+/*
+*/
