@@ -103,9 +103,9 @@ export class TransactionComponent implements OnInit {
 
   resetInputField(_value) {
     console.log('resetInputField' + _value);
-    if (_value == 'cifno') this.transactionForm.controls.cifno.reset(); this.cifno = false;
-    if (_value == 'investor') this.transactionForm.controls.investor.reset(); this.investor = false;
-    if (_value == 'productname') this.transactionForm.controls.productname.reset();; this.productname = false;
+    if (_value == 'cifno') this.transactionForm.controls.cifno.reset(), this.cifno = false;
+    if (_value == 'investor') this.transactionForm.controls.investor.reset(), this.investor = false;
+    if (_value == 'productname') this.transactionForm.controls.productname.reset(), this.productname = false;
 
   }
 
